@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kappale {
+            color: rgb(black, black, black);
+        }
+
+        #block2 {
+            display: block;
+            margin: 0.5rem 0rem 0rem 0rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome</h1>
+
+    <p id="kappale"> HELLO </p>
+    <button type="button" onclick="newColor()" id="kappale2">Random Colors</button>
+    <button id="block2" type="button" onclick="resetButton()">Reset</button>
+    <script>
+        function newColor() {
+
+            let red = Math.floor(Math.random() * 250);
+            let green = Math.floor(Math.random() * 250);
+            let blue = Math.floor(Math.random() * 250);
+
+            let colors = " RGB( "+red+", "+green+", "+blue+' )';
+            const textfc = "Color code:"
+            document.getElementById("kappale").style.color = colors
+            document.getElementById("kappale2").innerHTML = textfc + colors
+        }
+
+        function resetButton() {
+            document.getElementById("kappale").innerHTML = window.location.reload();
+        }
+    </script>
+</body>
+
+
+</html>
